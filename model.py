@@ -13,7 +13,7 @@ def U_NET(encoder="resnet34", encoder_weights="imagenet", classes=3, activation=
     - in_channels (int): Số kênh màu của ảnh đầu vào (ảnh màu RGB là 3).
     - classes (int): Số lớp bạn muốn phân loại. Trong trường hợp của bạn là 3 lớp:
                      0: Nền (background)
-                     1: Vạch liền (solid)
+                     1: Vạch liền (solid)x`
                      2: Vạch đứt (dashed)
     - activation: Hàm kích hoạt ở lớp cuối cùng. Để là None (mặc định) là tốt nhất khi
                   sử dụng hàm mất mát CrossEntropyLoss trong PyTorch.
