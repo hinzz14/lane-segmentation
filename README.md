@@ -34,7 +34,7 @@ Cấu trúc U-Net bao gồm:
 * **Skip connections:** Kết nối trực tiếp giữa encoder và decoder ở các cấp độ tương ứng, giúp truyền tải thông tin chi tiết bị mất trong quá trình mã hóa.
 
 **Chi tiết triển khai mô hình:**
-Chúng tôi sử dụng một phiên bản U-Net với các cấu hình sau:
+Sử dụng một phiên bản U-Net với các cấu hình sau:
 * **Encoder (Backbone):** Được chọn là **`resnet34`**. Đây là một kiến trúc ResNet phổ biến, cung cấp sự cân bằng tốt giữa tốc độ xử lý và khả năng trích xuất đặc trưng mạnh mẽ, phù hợp cho các tác vụ thị giác máy tính.
 * **Trọng số Encoder:** Sử dụng trọng số đã được huấn luyện trước trên bộ dữ liệu **ImageNet**. Việc sử dụng các trọng số này (gọi là **pre-trained weights**) giúp mô hình khởi đầu với khả năng nhận diện các đặc trưng cơ bản của hình ảnh, từ đó tăng tốc độ hội tụ trong quá trình huấn luyện và cải thiện đáng kể hiệu suất phân đoạn.
 * **Kênh đầu vào (`in_channels`):** Là `3`, tương ứng với ảnh đầu vào có 3 kênh màu (RGB).
